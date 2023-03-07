@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British</title>
+    <link rel="stylesheet" href="weather.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wgh@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#search-button').click(function() {
+          var city = $('#city-select').val();
+          var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=9fd7a449d055dba26a982a3220f32aa2';
+          $.getJSON(url, function(data) {
+            $('#temperature').html(data.main.temp + ' °C');
+            $('#humidity').html(data.main.humidity + '%');
+            $('#weather-status').html(data.weather[0].main);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="images/logo.png" class="logo">
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="weather.html">WEATHER</a></li>
+            <li><a href="food2.html">MEAL</a></li>
+          </ul>
+        </nav>
+        <img src="images/menu.png" class="menu-icon">
+      </div>
+
+      <div class="row-weather">
+        <div class="col-weather">
+          <h1>Find Your City's Weather</h1>
+          <p>Select your city below to get the current temperature, humidity, and weather status:</p>
+          <form>
+            <select id="city-select">
+              <option value="">Select city</option>
+              <option value="London">London</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Birmingham">Birmingham</option>
+              <option value="Liverpool">Liverpool</option>
+              <option value="Liverpool">British</option>
+
+            </select>
+            <button type="button" id="search-button">Search</button>
+          </form>
+          
+        </div>
+        <div class="col-weather">
+          <div class="card-container-weather">
+            <div class="cards card5">
+              <h5 id="temperature"></h5>
+              <p>Kelvin</p>
+            </div>
+            <div class="cards card6">
+              <h5 id="humidity"></h5>
+              <p>Humidity</p>
+            </div>
+            <div class="cards card7">
+              <h5 id="weather-status"></h5>
+              <p>Weather Status</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

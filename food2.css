@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  .container {
+    width: 100%;
+    height: 200vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/food.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+  }
+  .navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+  }
+  .logo{
+    width:50px ;
+    cursor: pointer;
+  }
+  .menu-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+  }
+  nav{
+    flex: 1;
+    text-align: right;
+  }
+  nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    
+  }
+  .row{
+    display: flex;
+    height:88% ;
+    align-items: center;
+  }
+  .col{
+    flex-basis: 50%;
+  }
+
+
+  .search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  #user-inp {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+    margin-right: 10px;
+  }
+  
+  #search-btn {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #search-btn:hover {
+    background-color: #005f77;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .search-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    #user-inp {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  /* Meal card container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Meal image */
+  .card-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Meal details */
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .details h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .details h4 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Meal category */
+  .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+  
+  .category h4 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Ingredients */
+  #ingredient-con {
+    margin-bottom: 1rem;
+  }
+  
+  #ingredient-con ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  #ingredient-con li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Recipe */
+  #recipe {
+    display: none;
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  #recipe pre {
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+  
+  #hide-recipe {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #show-recipe {
+    font-size: 1.2rem;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #show-recipe:hover {
+    background-color: #e2e2e2;
+  }
+  
+  /* Video link */
+  #video {
+    text-align: center;
+  }
+  
+  #video a {
+    font-size: 1.2rem;
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  #video a:hover {
+    text-decoration: underline;
+  }
+  
+  
+
+
+  
+  
